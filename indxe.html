@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather — Stylish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Weather.css">
+</head>
+<body>
+  <div class="stage">
+    <div class="weather-card" id="card">
+      <!-- 🔍 Search -->
+      <div class="top-search">
+        <div class="input">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="opacity:.6">
+            <path d="M21 21l-4.35-4.35" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="11" cy="11" r="6" stroke="#111" stroke-width="2"/>
+          </svg>
+          <input id="cityInput" placeholder="Search city name" aria-label="Search city" />
+        </div>
+        <button class="search-btn" id="searchBtn">Search</button>
+      </div>
+
+      <!-- 🌤️ Weather Info -->
+      <div class="center-wrap">
+        <img id="icon" class="weather-icon" src="" alt="icon" />
+        <div class="temp-big"><span id="tempVal">--</span><span class="deg">°c</span></div>
+        <div class="city-name" id="place">—</div>
+      </div>
+
+      <!-- 📊 Stats -->
+      <div class="stats-row">
+        <div class="stat">
+          <div class="icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2s5 5.5 5 8.5a5 5 0 11-10 0C7 7.5 12 2 12 2z" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="value" id="humidityVal">--%</div>
+          <div class="label">Humidity</div>
+        </div>
+
+        <div class="stat">
+          <div class="icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M3 12h13a4 4 0 010 8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 7h9a3 3 0 010 6" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="value" id="windVal">-- km/h</div>
+          <div class="label">Wind Speed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="Weather.js"></script>
+</body>
+</html>
